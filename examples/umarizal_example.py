@@ -4,11 +4,14 @@
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
 Run:
     python examples/umarizal_example.py
 """
 
 =======
+=======
+>>>>>>> theirs
 =======
 >>>>>>> theirs
 =======
@@ -34,6 +37,9 @@ if str(SRC_DIR) not in sys.path:
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
+>>>>>>> theirs
+=======
 >>>>>>> theirs
 =======
 >>>>>>> theirs
@@ -46,6 +52,7 @@ import numpy as np
 from geoheat1d.materials.properties import MaterialProperties
 from geoheat1d.scenarios.runner import run_scenario
 from geoheat1d.scenarios.scenario import IntrusionGeometry1D, Scenario
+<<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
@@ -84,11 +91,16 @@ from geoheat1d.viz.profile_plots import plot_peak_temperature_profile, plot_prof
 from geoheat1d.viz.time_series_plots import plot_temperature_time_series_by_distance
 >>>>>>> theirs
 =======
+=======
+>>>>>>> theirs
 from geoheat1d.viz.profile_plots import plot_peak_temperature_profile, plot_profile_at_time
 from geoheat1d.viz.time_series_plots import plot_temperature_time_series_by_distance
 
 
 OUTPUT_BASENAME = "umarizal"
+<<<<<<< ours
+>>>>>>> theirs
+=======
 >>>>>>> theirs
 
 
@@ -106,6 +118,7 @@ def main() -> None:
     t = np.geomspace(1e3, 1e13, 180)
 
     result = run_scenario(scenario, z=z, t=t)
+<<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
@@ -135,17 +148,23 @@ def main() -> None:
     fig_profile.savefig("umarizal_profile_contact_distance.png", dpi=150, bbox_inches="tight")
 
 =======
+=======
+>>>>>>> theirs
 
     profile_file = f"{OUTPUT_BASENAME}_profile_contact_distance.png"
     fig_profile, _ = plot_profile_at_time(result, time_index=60)
     fig_profile.savefig(profile_file, dpi=150, bbox_inches="tight")
 
     timeseries_file = f"{OUTPUT_BASENAME}_time_series_contact_distance.png"
+<<<<<<< ours
+>>>>>>> theirs
+=======
 >>>>>>> theirs
     fig_timeseries, _ = plot_temperature_time_series_by_distance(
         result,
         distances_m=[0.0, 200.0, 500.0, 1000.0],
     )
+<<<<<<< ours
 <<<<<<< ours
     fig_timeseries.savefig("umarizal_time_series_contact_distance.png", dpi=150, bbox_inches="tight")
 
@@ -175,6 +194,8 @@ def main() -> None:
 =======
 >>>>>>> theirs
 =======
+=======
+>>>>>>> theirs
     fig_timeseries.savefig(timeseries_file, dpi=150, bbox_inches="tight")
 
     peak_file = f"{OUTPUT_BASENAME}_peak_temperature_contact_distance.png"
@@ -184,6 +205,9 @@ def main() -> None:
     print(f"Saved: {profile_file}")
     print(f"Saved: {timeseries_file}")
     print(f"Saved: {peak_file}")
+<<<<<<< ours
+>>>>>>> theirs
+=======
 >>>>>>> theirs
 
 
