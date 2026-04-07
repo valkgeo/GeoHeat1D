@@ -15,9 +15,15 @@ class IntrusionGeometry1D:
 
 @dataclass(frozen=True)
 class Scenario:
-    """Forward-model scenario definition."""
+    """Forward-model scenario definition.
+    
+    Defines initial conditions for a tabular intrusion in host rock with linear
+    geothermal gradient.
+    """
 
     geometry: IntrusionGeometry1D
     host_material: MaterialProperties
-    background_temperature_c: float
+    surface_temperature_c: float
+    geothermal_gradient_c_per_km: float
     intrusion_temperature_c: float
+    background_temperature_c: float = None  # DEPRECATED: use surface_temperature_c + gradient instead

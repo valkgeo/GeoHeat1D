@@ -11,7 +11,8 @@ def _result():
     scenario = Scenario(
         geometry=IntrusionGeometry1D(center_depth_m=1000.0, half_thickness_m=100.0),
         host_material=MaterialProperties(k=2.5, rho=2700.0, cp=1000.0),
-        background_temperature_c=200.0,
+        surface_temperature_c=200.0,
+        geothermal_gradient_c_per_km=0.0,
         intrusion_temperature_c=900.0,
     )
     z = np.linspace(700.0, 1300.0, 51)
