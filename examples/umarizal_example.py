@@ -9,7 +9,27 @@ import numpy as np
 from geoheat1d.materials.properties import MaterialProperties
 from geoheat1d.scenarios.runner import run_scenario
 from geoheat1d.scenarios.scenario import IntrusionGeometry1D, Scenario
+<<<<<<< ours
+<<<<<<< ours
+<<<<<<< ours
+<<<<<<< ours
 from geoheat1d.viz.profile_plots import plot_profile_at_time
+=======
+from geoheat1d.viz.profile_plots import plot_peak_temperature_profile, plot_profile_at_time
+from geoheat1d.viz.time_series_plots import plot_temperature_time_series_by_distance
+>>>>>>> theirs
+=======
+from geoheat1d.viz.profile_plots import plot_peak_temperature_profile, plot_profile_at_time
+from geoheat1d.viz.time_series_plots import plot_temperature_time_series_by_distance
+>>>>>>> theirs
+=======
+from geoheat1d.viz.profile_plots import plot_peak_temperature_profile, plot_profile_at_time
+from geoheat1d.viz.time_series_plots import plot_temperature_time_series_by_distance
+>>>>>>> theirs
+=======
+from geoheat1d.viz.profile_plots import plot_peak_temperature_profile, plot_profile_at_time
+from geoheat1d.viz.time_series_plots import plot_temperature_time_series_by_distance
+>>>>>>> theirs
 
 
 def main() -> None:
@@ -26,9 +46,46 @@ def main() -> None:
     t = np.geomspace(1e3, 1e13, 180)
 
     result = run_scenario(scenario, z=z, t=t)
+<<<<<<< ours
+<<<<<<< ours
+<<<<<<< ours
+<<<<<<< ours
     fig, _ = plot_profile_at_time(result, time_index=60)
     fig.savefig("umarizal_profile.png", dpi=150, bbox_inches="tight")
     print("Saved: umarizal_profile.png")
+=======
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
+
+    fig_profile, _ = plot_profile_at_time(result, time_index=60)
+    fig_profile.savefig("umarizal_profile_contact_distance.png", dpi=150, bbox_inches="tight")
+
+    fig_timeseries, _ = plot_temperature_time_series_by_distance(
+        result,
+        distances_m=[0.0, 200.0, 500.0, 1000.0],
+    )
+    fig_timeseries.savefig("umarizal_time_series_contact_distance.png", dpi=150, bbox_inches="tight")
+
+    fig_peak, _ = plot_peak_temperature_profile(result)
+    fig_peak.savefig("umarizal_peak_temperature_contact_distance.png", dpi=150, bbox_inches="tight")
+
+    print("Saved: umarizal_profile_contact_distance.png")
+    print("Saved: umarizal_time_series_contact_distance.png")
+    print("Saved: umarizal_peak_temperature_contact_distance.png")
+<<<<<<< ours
+<<<<<<< ours
+<<<<<<< ours
+>>>>>>> theirs
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
 
 
 if __name__ == "__main__":

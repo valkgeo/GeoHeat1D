@@ -8,6 +8,44 @@ def peak_temperature_by_depth(result):
     return np.max(result.temperature_c, axis=1)
 
 
+<<<<<<< ours
+<<<<<<< ours
+<<<<<<< ours
+<<<<<<< ours
+=======
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
+def peak_temperature_by_distance_from_contact(result) -> tuple[np.ndarray, np.ndarray]:
+    """Peak temperature summarized by nearest-contact distance.
+
+    Returns sorted unique distances and the corresponding peak temperature at each
+    distance (max over depths sharing that distance).
+    """
+    distances = result.distance_from_contact_m
+    peaks = peak_temperature_by_depth(result)
+
+    unique_distances = np.unique(distances)
+    peak_by_distance = np.zeros(unique_distances.shape, dtype=float)
+    for i, d in enumerate(unique_distances):
+        peak_by_distance[i] = np.max(peaks[np.isclose(distances, d)])
+
+    return unique_distances, peak_by_distance
+
+
+<<<<<<< ours
+<<<<<<< ours
+<<<<<<< ours
+>>>>>>> theirs
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
 def max_temperature(result) -> float:
     """Single global maximum temperature over depth and time."""
     return float(np.max(result.temperature_c))
