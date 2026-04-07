@@ -9,7 +9,8 @@ def test_run_scenario_returns_expected_shape():
     scenario = Scenario(
         geometry=IntrusionGeometry1D(center_depth_m=1000.0, half_thickness_m=100.0),
         host_material=MaterialProperties(k=2.0, rho=2600.0, cp=900.0),
-        background_temperature_c=150.0,
+        surface_temperature_c=150.0,
+        geothermal_gradient_c_per_km=0.0,
         intrusion_temperature_c=850.0,
     )
     z = np.linspace(0.0, 2000.0, 31)
