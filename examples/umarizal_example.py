@@ -1,8 +1,20 @@
 """Executable Umarizal-style baseline scenario for GeoHeat1D v1 development.
 
-Run:
+Run from repo root:
     python examples/umarizal_example.py
+
+The script appends `<repo>/src` to `sys.path` so it can be run without
+installing the package first.
 """
+
+from pathlib import Path
+import sys
+
+# Allow running the example directly from a source checkout.
+REPO_ROOT = Path(__file__).resolve().parents[1]
+SRC_DIR = REPO_ROOT / "src"
+if str(SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(SRC_DIR))
 
 import numpy as np
 
