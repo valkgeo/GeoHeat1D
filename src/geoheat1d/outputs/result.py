@@ -9,8 +9,8 @@ import numpy as np
 class ThermalResult:
     """Container for a full depth-time temperature field.
 
-    Internal coordinates remain absolute depth, while helper properties expose
-    publication-ready distance from intrusion contact.
+    Internal coordinates remain absolute depth. Publication-ready plotting
+    helpers can rely on nearest-contact distance properties.
     """
 
     depth_m: np.ndarray

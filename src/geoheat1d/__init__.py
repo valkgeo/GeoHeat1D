@@ -6,11 +6,11 @@ from .physics.jaeger_tabular import JaegerTabularModel
 from .scenarios.runner import run_scenario
 from .scenarios.scenario import IntrusionGeometry1D, Scenario
 
-__all__ = [
+__all__ = (
     "MaterialProperties",
     "JaegerTabularModel",
     "IntrusionGeometry1D",
     "Scenario",
     "ThermalResult",
     "run_scenario",
-]
+)
