@@ -16,6 +16,7 @@ class ThermalResult:
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
     """Container for a full depth-time temperature field."""
 =======
 =======
@@ -64,6 +65,13 @@ class ThermalResult:
 >>>>>>> theirs
 =======
 >>>>>>> theirs
+=======
+    """Container for a full depth-time temperature field.
+
+    Internal coordinates remain absolute depth. Publication-ready plotting
+    helpers can rely on nearest-contact distance properties.
+    """
+>>>>>>> theirs
 
     depth_m: np.ndarray
     time_s: np.ndarray
@@ -78,7 +86,10 @@ class ThermalResult:
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
 =======
+=======
+>>>>>>> theirs
 =======
 >>>>>>> theirs
 =======
@@ -118,6 +129,9 @@ class ThermalResult:
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
+>>>>>>> theirs
+=======
 >>>>>>> theirs
 =======
 >>>>>>> theirs

@@ -7,6 +7,7 @@
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
 """Simple plotting helpers for thermal profiles and time series."""
 
 import matplotlib.pyplot as plt
@@ -21,6 +22,8 @@ def plot_profile_at_time(result, time_index: int = -1):
     ax.invert_yaxis()
     ax.set_title(f"Temperature profile at t={result.time_s[time_index]:.3e} s")
 =======
+=======
+>>>>>>> theirs
 =======
 >>>>>>> theirs
 =======
@@ -75,6 +78,9 @@ def plot_peak_temperature_profile(result):
 <<<<<<< ours
 <<<<<<< ours
 <<<<<<< ours
+<<<<<<< ours
+>>>>>>> theirs
+=======
 >>>>>>> theirs
 =======
 >>>>>>> theirs
